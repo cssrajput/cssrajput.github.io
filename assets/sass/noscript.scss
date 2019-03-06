@@ -1,0 +1,32 @@
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/vendor';
+@import 'libs/breakpoints';
+@import 'libs/html-grid';
+
+/*
+	cssrajput.github.io | @cssrajput
+	Free for personal and commercial use under the CCA 3.0 license (cssrajput.github.io/license)
+*/
+
+/* Loader */
+
+	body.landing {
+
+		&.is-preload {
+
+			// Spinner (active)
+
+				&:before {
+					display: none;
+				}
+
+			// Overlay (active)
+
+				&:after {
+					display: none;
+				}
+
+		}
+	}
