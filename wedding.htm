@@ -1,19 +1,57 @@
 <!DOCTYPE HTML>
+<!--
+	Chandra Shekhar Singh Rajput
+	cssrajput.github.io | @cssrajput
+	Free for personal and commercial use under the CCA 3.0 license (cssrajput.github.io/license)
+-->
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-p {
-  text-align: center;
-  font-size: 60px;
-  margin-top: 0px;
-}
-</style>
-</head>
-<body>
+	<head>
+		<title>Anu weds Chandu</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload landing">
+		<div id="page-wrapper">
 
-<p id="demo"></p>
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="index.html">cssrajput</a></h1>
+				</header>
 
+			<!-- Banner -->
+				<section id="banner">
+					<div class="content">
+						<header>
+							<h2>Anushri & Chandra Shekhar </h2>
+							<p>We are taking a huge step in our lives, and request you to bless us. We have got engaged and will be getting married...</p>
+							<small>10.12.2020</small>
+              <p id="count"></p>
+						</header>
+					</div>
+					<a href="#one" class="goto-next scrolly">Next</a>
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="http://twitter.com/cssrajput" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="http://facebook.com/css3392" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://plus.google.com/+ChandrashekharSingh3392" class="icon alt fa-google-plus"><span class="label">Google</span></a></li>
+						<li><a href="https://www.linkedin.com/in/cssrajput" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://instagram.com/cssrajput" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://github.com/cssrajput" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="mailto:cssrajput@gmail.com" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="skype:cssrajput?chat" class="icon alt fa-skype"><span class="label">Skype</span></a></li>
+						<li><a href="https://t.me/cssrajput" class="icon alt fa-telegram"><span class="label">Telegram</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; cssrajput. All rights reserved.</li><li>Design: <a href="http://cssrajput.github.io">cssrajput</a></li>
+					</ul>
+				</footer>
+
+		</div>
 <script>
 // Set the date we're counting down to
 var countDownDate = new Date("Dec 10, 2020 22:00:00").getTime();
@@ -34,16 +72,25 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = "in " + days + " day(s) " + hours + " hours "
+  document.getElementById("count").innerHTML = "in " + days + " day(s) " + hours + " hours "
   + minutes + " minutes " + seconds + " sec ";
     
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "Married...";
+    document.getElementById("count").innerHTML = "Married...";
   }
 }, 1000);
 </script>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-</body>
+	</body>
 </html>
