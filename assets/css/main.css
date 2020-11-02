@@ -3414,7 +3414,8 @@ input, select, textarea {
 		position: absolute;
 	}
 
-/* Banner */
+/* 
+*/
 
 	#banner {
 		background-attachment: fixed;
@@ -3461,6 +3462,30 @@ input, select, textarea {
 			vertical-align: middle;
 			z-index: 1;
 		}
+#banner .ccontent {
+			display: inline-block;
+			margin-right: 1%;
+			max-width: 95%;
+			padding: 6em;
+			position: relative;
+			text-align: center;
+			vertical-align: middle;
+			z-index: 1;
+		}
+#banner .ccontent  header {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+				#banner .ccontent header h2 {
+					font-size: 2.5em;
+					margin: 0;
+				}
+
+				#banner .ccontent header p {
+					margin: 0.2em 0 0 0;
+					top: 0;
+				}
 
 			#banner .content header {
 				display: inline-block;
