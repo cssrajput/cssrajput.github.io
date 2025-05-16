@@ -39,8 +39,28 @@
 
     <!-- Age Calculation Script -->
     <script>
+	function getAgeInYears(dateString) {
+	  //Normalise and parse the input date
+	  const [month, day, year] = dateString.split(/[-\/]/).map(Number);
+	  const dob = new Date(year, month - 1, day);
+	
+	  const today = new Date();
+	  let age = today.getFullYear() - dob.getFullYear();
+	
+	  // Adjust age if birthday hasn't occurred yet this year
+	  const hasBirthdayOccurred =
+	    today.getMonth() > dob.getMonth() ||
+	    (today.getMonth() === dob.getMonth() && today.getDate() >= dob.getDate());
+	
+	  if (!hasBirthdayOccurred) {
+	    age--;
+	  }
+	
+	  return age;
+	}
+
         // Age calculation script here
-		function getAge(dateString) {
+	function getAge(dateString) {
 	var now = new Date();
 	var today = new Date(now.getYear(),now.getMonth(),now.getDate());
   
@@ -115,7 +135,8 @@
 	else ageString = "Oops! Could not calculate age!";
   
 	return ageString;
-  }    </script>
+  }    
+    </script>
 </head>
 
 <body>
@@ -203,7 +224,7 @@
 								<div class="timeline-badge" style="background-image:url(images/meet.jpg)"></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
-										<h3 class="timeline-title">1st Meet</h3><span class="date">July 28,
+										<h3 class="timeline-title">1st Meet</h3><span class="date">July,
 											2020</span>
 									</div>
 									<div class="timeline-body">
@@ -216,7 +237,7 @@
 								<div class="timeline-badge" style="background-image:url(images/whatsapp.jpg)"></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
-										<h3 class="timeline-title">1st Text</h3><span class="date">August 8,
+										<h3 class="timeline-title">1st Text</h3><span class="date">August,
 											2020</span>
 									</div>
 									<div class="timeline-body">
@@ -229,7 +250,7 @@
 								<div class="timeline-badge" style="background-image:url(images/engg.jpg)"></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
-										<h3 class="timeline-title">Engaged</h3><span class="date">October 30,
+										<h3 class="timeline-title">Engaged</h3><span class="date">October,
 											2020</span>
 									</div>
 									<div class="timeline-body">
@@ -242,7 +263,7 @@
 								<div class="timeline-badge" style="background-image:url(images/tilak.jpg)"></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
-										<h3 class="timeline-title">Tilak Ceremony</h3><span class="date">December 7, 2020</span>
+										<h3 class="timeline-title">Tilak Ceremony</h3><span class="date">December, 2020</span>
 									</div>
 									<div class="timeline-body">
 										<p>Police Nagar, Hingna Road, Nagpur-440016
@@ -254,7 +275,7 @@
 								<div class="timeline-badge" style="background-image:url(images/wed.jpg)"></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
-										<h3 class="timeline-title">Main Ceremony</h3><span class="date">December 10,
+										<h3 class="timeline-title">Main Ceremony</h3><span class="date">December,
 											2020</span>
 									</div>
 									<div class="timeline-body">
@@ -269,7 +290,7 @@
 								<div class="timeline-badge" style="background-image:url(images/recp.jpg)"></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
-										<h3 class="timeline-title">Reception</h3><span class="date">December 11, 2020</span>
+										<h3 class="timeline-title">Reception</h3><span class="date">December, 2020</span>
 									</div>
 									<div class="timeline-body">
 										<a
@@ -284,7 +305,7 @@
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">Shanaya Singh</h3><span class="date">( <script type="text/javascript">
-												document.write(getAge('04/01/2022'));
+												document.write(getAgeInYears('04/01/2022'));
 											 </script> )</span>
 									</div>
 									<div class="timeline-body">
@@ -303,7 +324,7 @@
 				<div class="row copyright">
 					<div class="col-md-12 text-center">
 						<p>
-							<small class="block">&copy; 2024 cssrajput. All Rights Reserved.</small>
+							<small class="block">&copy; 2025 cssrajput. All Rights Reserved.</small>
 						</p>
 					</div>
 				</div>
